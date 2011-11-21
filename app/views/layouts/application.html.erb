@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Wirates</title>
+<%= stylesheet_link_tag(['darkest-blue', 'style', 'gds_css_framework', 'colorbox'])%>
+
+<%= javascript_include_tag 'jquery.min', 'cufon-yui','ColaborateLight_400.font', 'jquery.cycle.all.min', 'jcyclecalling', 'jquery.superfish.min', 'sperfishscript', 'fade', 'custom', 'jquery.colorbox','jquery.validate.min' , 'application' %>
+
+
+</head>
+
+<body>
+<div id="header">
+	<div class="header-bg">
+		<div class="inner inner-space">
+    	<div class="container_wrap">
+        	<div class="half_width">
+            	<h1><a href="/">Azucena</a></h1>
+            </div><!--End of half_width-->
+            <div class="half_width">
+            	<div id="navigation">
+                	<ul>
+                    	<li>
+                        	<a href="/" class="selected"><span class="menu-title">Home</span></a>
+                            
+                        </li>
+                        <li><a href="#"><span class="menu-title">Company</span></a>
+                        	<ul>
+								<li><a href="/company/about-us">About Us</a></li>
+								<li><a href="/company/careers">Careers</a></li>
+								<li><a href="/company/our-blog">Our blog</a></li>
+								
+                            </ul>
+                        </li>
+                        
+                        <li><a href="/portfolio"><span class="menu-title">Portfolio</span></a>
+                        	
+                        </li>
+                        <li>
+                        	<a href="#"><span class="menu-title">Service</span></a>
+                            <ul>
+                            	<li><a href="/service/web-design/">Web Design</a></li>
+                                <li><a href="/service/web-programming">Web Programming</a></li>
+								<li><a href="/service/logo-design/">Logo Design</a></li>
+								<li><a href="/service/internet-marketing/">Internet Marketing</a></li>
+								<li><a href="/service/erpcrm-solution">ERP/CRM Solution</a></li>
+								<li><a href="/service/rails-training">Rails Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/contacts"><span class="menu-title">Contact</span></a></li>
+                    </ul>
+                </div><!--End of navigation-->
+            </div><!--End of half_width-->
+            <div class="clear">&nbsp;</div>
+        </div><!--End of container_wrap-->
+        
+
+
+<%= yield %>
+
+<div id="footer">
+	<div class="inner">
+		<div class="container_wrap">
+			<div class="one_fourth">
+				<h4 class="font">Recent Post</h4>
+				<div class="footer-post">
+					<h5>Blog Post 1</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+				</div><!--End of footer-post-->
+				<div class="footer-post">
+					<h5>Blog Post 2</h5>
+					<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p></a>
+				</div><!--End of footer-post-->
+			</div><!--End of one_third-->
+			<div class="one_fourth">
+				<h4 class="font">Popular Post</h4>
+				<div class="footer-post">
+					<h5>Azucena Realsed</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+				</div><!--End of footer-post-->
+				<div class="footer-post">
+					<h5>Wordpress Desigin</h5>
+					<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p></a>
+				</div><!--End of footer-post-->
+			</div><!--End of one_third-->
+			<div class="one_fourth">
+				<h4 class="font">Follow us</h4>
+				<div class="footer-post">
+				<div class="social-icons">
+					<ul>
+						<li><a class="imagefade" href="#"><img src="/images/icons/fbook.png" alt="" /></a></li>
+						<li><a class="imagefade" href="#"><img src="/images/icons/btwitter.png" alt="" /></a></li>
+						<li><a class="imagefade" href="#"><img src="/images/icons/linkedin.png" alt="" /></a></li>
+						<li><a class="imagefade" href="#"><img src="/images/icons/skype.png" alt="" /></a></li>
+					</ul>
+				</div><!--End of social-icons-->
+				</div><!--End of footer-post-->
+			</div><!--End of one_fourth-->
+			<div class="one_fourth">
+				<h4 class="font">About us</h4>
+				<div class="footer-post">
+					<p>We are a Web Design and Development Studio based in Pokhara City if you like this theme purchase a license.</p>
+					<p>&copy; Designed and Developed by SP Studios, All Rights Reserved, 2010 - 2011.</p>
+				</div><!--End of footer-post-->
+			</div><!--End of one_third-->
+			<div class="clear">&nbsp;</div>
+		</div><!--End of container_wrap-->
+		<div class="copyright">
+			<div class="container_wrap">
+				<div class="half_width">
+					<span>&copy; Copyright Right All Reversed</span>
+				</div><!--End of two_third-->
+				<div class="half_width">
+					<div class="small-nav">
+						<ul>
+							<li><a href="/pages/terms-conditions">Terms & Conditions</li></a>
+							<li><a href="/pages/privicy-policy/">Privicy Policy</li></a>
+							<li><a href="#">Send Feedbacks</li></a>
+							<li><a href="#">Links</li></a>
+						</ul>
+					</div><!--End of small_nav-->
+				</div><!--End of half_width-->
+				<div class="clear">&nbsp;</div>
+			</div><!--End of container-wrap-->
+		</div><!--End of copyright-->
+	</div><!--End of inner-->
+</div><!--End of footer-->
+</body>
+</noscript>
+<div style="text-align: center;"><div style="position:relative; top:0; margin-right:auto;margin-left:auto; z-index:99999">
+
+</div></div>
+
+</html>

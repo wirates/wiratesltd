@@ -1,0 +1,92 @@
+	<div style="padding:10px;"></div>
+	</div><!--End of inner-->
+    </div><!--End of header-bg-->
+</div><!--End of header-->
+
+<div id="breadcrums">
+	<div class="container_wrap">
+		<div class="full_width">
+			<div class="breadcrums">
+				<div class="column-680">
+					<h2 class="font">Contacts</h2>
+				</div><!--End of column-680-->
+				<div class="one_fourth">
+				
+				</div><!--End of one_fourth-->
+				<div class="clear">&nbsp;</div>
+			</div><!--Endo of breadcrums-->
+			<div class="clear">&nbsp;</div>
+			<div class="hrline">&nbsp;</div>
+		</div><!--end of full_width-->
+		<div class="clear">&nbsp;</div>
+	</div><!--End of container_wrap-->
+</div><!--End of breadcrums-->
+
+<div id="page-left-sidebar-block">
+	<div class="container_wrap">
+		<div class="two_third">
+			<h2 class="font">Please Keep in  Touch with us !</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet nisl id nunc tincidunt eget consectetur lorem condimentum. Aliquam erat volutpat. Phasellus vel elementum justo. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet nisl id nunc tincidunt eget consectetur lorem condimentum.</p>
+			<div class="clear">&nbsp;</div>
+            <div class="contact-form">
+            	<% form_for :contact , :html=>{:id=>'contactform'} do |form| %>
+            	
+                	<ol>
+                    	<li>
+                        	<label for="email">Name ( requried ) :</label>
+                        	<%= form.text_field :name, :class=>'text_field medium required' %>
+                            
+                        </li>
+                        <li>
+                        	<label for="email">E-mail ( requried ) :</label>
+                        	<%= form.text_field :address, :class => 'text_field medium required email' %>
+                            
+                        </li>
+                        <li>
+                        	<label for="email">Subject ( requried ) :</label>
+                        	<%= form.text_field :subject, :class=>'text_field medium required' %>
+                            
+                        </li>
+                        <li>
+                        	<label for="message">Hit Your Message :</label>
+                        	<%= form.text_area :message, :rows => 7, :cols => 34, :class=>'text_field medium requried' %>
+                            
+                        </li>
+                        <li>
+                        	<%= submit_tag 'Send', :class => "submit" %>
+                            <div class="clear">&nbsp;</div>
+                        </li>
+                    </ol>
+                <% end %><!--End of form-->
+            </div><!--End of contact-form-->
+		</div><!--End of two_third-->
+		
+        <div class="one_third">
+        	<div id="sidebar">
+            	<div class="sidebar-block">
+                	<div class="title">
+                    	<h5 class="font">Main Office Address</h5>
+                    </div><!--End of title-->
+					<div class="contact-info">
+						<ul>
+							<li>
+								<p>
+									Azucena Home<span>1234 Address City, Rambazar</span>
+								</p>
+							</li>
+						</ul>
+					</div><!--End of contact-info-->
+                </div><!--End of sidebar-block-->
+
+                <div class="clear">&nbsp;</div>
+            </div><!--End of sidebar-->
+        </div><!--End of one_third-->
+		
+		<div class="clear">&nbsp;</div>
+		<div class="full_width">
+			<div class="hrline">&nbsp;</div>
+		</div><!--End of full-width-->
+		<div class="clear">&nbsp;</div>
+	</div><!--End of container_wrap-->
+</div><!--End of page-left-sidebar-block-->

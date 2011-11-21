@@ -1,0 +1,33 @@
+<div id="login-inner">
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<th>Username</th>
+			<td><%= f.email_field :username, :class => 'login-inp' %></td> 
+		</tr>
+		<tr>
+			<th>Password</th>
+			<td><%= f.password_field :password,:class=>"login-inp" %></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td valign="top">
+				<% if devise_mapping.rememberable? -%>
+    		<%= f.check_box :remember_me %><%= f.label :remember_me %> 
+  		<% end %></td>
+		</tr>
+		
+		<tr>
+			<th></th>
+			<td><%= f.submit "Sign in", :class=> "submit-login" %></td>
+		</tr>
+		
+		<% if !flash.empty? %>
+		<tr>
+			
+			<td colspan="2"><div id="notice"><%= alert %></div></td>
+	    </tr>
+	     <% end %>
+		</table>
+		<% end %>
+	</div>

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Admin: <%= controller.action_name %></title>
+
+<%= stylesheet_link_tag  'screen' %>
+  <%= javascript_include_tag :ckeditor %>
+<!--[if IE]>
+<link rel="stylesheet" media="all" type="text/css" href="css/pro_dropline_ie.css" />
+<![endif]-->
+
+
+
+
+
+
+</head>
+<body> 
+<!-- Start: page-top-outer -->
+<div id="page-top-outer">    
+
+<!-- Start: page-top -->
+<div id="page-top">
+
+	<!-- start logo -->
+	<div id="logo">
+	<span style="color:#fff; font-size:29px;">Wirates Admin Panel</span>
+	</div>
+	<!-- end logo -->
+	
+	
+ 	<div class="clear"></div>
+
+</div>
+<!-- End: page-top -->
+
+</div>
+<!-- End: page-top-outer -->
+	
+<div class="clear">&nbsp;</div>
+ 
+<!--  start nav-outer-repeat................................................................................................. START -->
+<div class="nav-outer-repeat"> 
+<!--  start nav-outer -->
+<div class="nav-outer"> 
+
+		<!-- start nav-right -->
+		<div id="nav-right">
+		
+			<div class="nav-divider">&nbsp;</div>
+			<div class="showhide-account"><img src="/images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
+			<div class="nav-divider">&nbsp;</div>
+			<div class="showhide-account">
+			<% if admin_signed_in? %> 
+				<%= link_to image_tag("/images/shared/nav/nav_logout.gif", :border => 0), destroy_admin_session_path %> 
+			<% else %> 
+				<%= link_to "sign in", new_admin_session_path %> &nbsp; 
+			<% end %>
+			</div>
+			<div class="clear">&nbsp;</div>
+		
+			<!--  start account-content -->	
+			<div class="account-content">
+			<div class="account-drop-inner">
+				<a href="" id="acc-settings">Settings</a>
+				<div class="clear">&nbsp;</div>
+				<div class="acc-line">&nbsp;</div>
+				<a href="" id="acc-details">Personal details </a>
+				<div class="clear">&nbsp;</div>
+				<div class="acc-line">&nbsp;</div>
+				<a href="" id="acc-project">Project details</a>
+				<div class="clear">&nbsp;</div>
+				<div class="acc-line">&nbsp;</div>
+				<a href="" id="acc-inbox">Inbox</a>
+				<div class="clear">&nbsp;</div>
+				<div class="acc-line">&nbsp;</div>
+				<a href="" id="acc-stats">Statistics</a> 
+			</div>
+			</div>
+			<!--  end account-content -->
+		
+		</div>
+		<!-- end nav-right -->
+
+
+		<!--  start nav -->
+		<div class="nav">
+		<div class="table">
+		
+		<ul <% if controller.controller_name == 'dashboard' %> class="current" <% else %> class="select" <% end %>><li><a href="/admin/dashboard"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		
+		</ul>
+		
+		<div class="nav-divider">&nbsp;</div>
+		                   
+		<ul <% if controller.controller_name == 'pages' %> class="current" <% else %> class="select" <% end %>><li><a href="/admin/pages"><b>Pages</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<div <% if controller.controller_name == 'pages' %> class="select_sub show" <% else %> class="select_sub" <% end %>>
+			<ul class="sub">
+				<li><a href="/admin/pages">View all Pages</a></li>
+				<li class="sub_show"><%= link_to  "Add Pages", new_admin_page_path, :class => 'button positive' %></li>
+				
+			</ul>
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		<div class="nav-divider">&nbsp;</div>
+		
+		<ul <% if controller.controller_name == 'companies' %> class="current" <% else %> class="select" <% end %> ><li><a href="/admin/companies"><b>Company</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<div <% if controller.controller_name == 'companies' %> class="select_sub show" <% else %> class="select_sub" <% end %>>
+			<ul class="sub">
+				<li><a href="/admin/companies">View all Pages</a></li>
+				<li class="sub_show"><%= link_to  "Add Company pages", new_admin_company_path, :class => 'button positive' %></li>
+			</ul>
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		<div class="nav-divider">&nbsp;</div>
+		
+		<ul <% if controller.controller_name == 'services' %> class="current" <% else %> class="select" <% end %>><li><a href="/admin/services"><b>Services</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<div <% if controller.controller_name == 'services' %> class="select_sub show" <% else %> class="select_sub" <% end %>>
+			<ul class="sub">
+				<li><a href="/admin/services">View all Pages</a></li>
+				<li class="sub_show"><%= link_to  "Add Service Pages", new_admin_service_path, :class => 'button positive' %></li>
+			 
+			</ul>
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		</div>
+		<!--  start nav -->
+
+</div>
+<div class="clear"></div>
+<!--  start nav-outer -->
+</div>
+<!--  start nav-outer-repeat................................................... END -->
+
+ <div class="clear"></div>
+
+
+			<p style="color: green"><%= flash[:notice] %></p>
+	<!-- start content-outer ........................................................................................................................START -->
+<div id="content-outer">
+  			<%= yield %>
+  		</div>
+  		<div class="clear">&nbsp;</div>
+    
+<!-- start footer -->         
+<div id="footer">
+	<!--  start footer-left -->
+	<div id="footer-left">
+	
+	Wirates Admin &copy; Copyright <span id="spanYear"></span> <a href="http://www.wirates.com">www.wirates.com</a>. All rights reserved.</div>
+	<!--  end footer-left -->
+	<div class="clear">&nbsp;</div>
+</div>
+<!-- end footer -->
+ 
+</body>
+</html>
+		

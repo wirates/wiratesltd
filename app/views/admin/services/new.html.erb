@@ -1,0 +1,53 @@
+
+
+    <div id="content">
+
+		<% form_for [:admin, @service],:html => { :multipart => true } do |f| %>
+		
+		  
+		  <%- @service.errors.full_messages.each do |message| -%>
+		   <div class="errorExplanation"> <p><%= message %></p></div>
+		  <%- end -%>
+		   
+		  
+		  <div id="breadcrumb">
+		  	   <%= link_to "Pages", admin_services_path %> &raquo; New
+		  </div>
+		 
+		  <p>
+		    <%= f.label :title %>
+		    <%= f.text_field :title, :class => 'text' %>
+		  </p>
+		
+		 
+		  <p>
+		    <%= f.label :body %>
+		    <%= f.text_area :body, :class => 'tiny_mce' %>
+		  </p>
+		  <p>
+		    <%= f.label :meta_title %>
+		    <%= f.text_field :meta_title, :class => 'text' %>
+		  </p>
+		  <p>
+		    <%= f.label :meta_keyword %>
+		    <%= f.text_area :meta_keyword, :class => 'text' %>
+		  </p>
+		
+		  <p>
+			<%= f.label :meta_desc %>
+		    <%= f.text_area :meta_desc, :class => 'tiny_mce' %>
+			
+		  </p>
+		  
+		  <p class="button">
+  	<button class="button positive" type="submit">
+		 Save
+	</button>
+	<%= link_to "Cancel", onclick="javascript:history.back()", :class => 'button negative' %>
+    
+  </p>
+		
+		<% end %>
+
+
+  </div>
