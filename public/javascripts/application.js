@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 		     },
 		
 		    "contact[message]":{
-						required: true,
+						required: true
 						
 			}
 		},
@@ -41,7 +41,7 @@ jQuery(document).ready(function() {
 						
 		},
 		"contact[message]":{
-						            required: "Please provide a password"
+						            required: "Please enter message"
 						
 		}
 		}
