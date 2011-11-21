@@ -20,4 +20,6 @@ gem 'ckeditor', '3.4.2.pre'
 
 # gem 'aws-s3', :require => 'aws/s3'
 
+gem 'paperclip'
+
 
