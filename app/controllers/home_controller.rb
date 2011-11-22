@@ -28,16 +28,16 @@ class HomeController < ApplicationController
 	end
 
   def quote
-      if request.post? and params[:quote]
-            if quote = Requestquote.new(params[:quote])
+      if request.post? and params[:requestquote]
+            if quote = Requestquote.new(params[:requestquote])
 
-              quote.name = "#{params[:quote][:name]}"
-              quote.phone = "#{params[:quote][:phone]}"
-              quote.email = "#{params[:quote][:email]}"
-              quote.current_website = "#{params[:quote][:current_website]}"
-              quote.numpage = "#{params[:quote][:numpage]}"
-              quote.target_market = "#{params[:quote][:target_market]}"
-              quote.project_desc = "#{params[:quote][:project_desc]}"
+              quote.name = "#{params[:requestquote][:name]}"
+              quote.phone = "#{params[:requestquote][:phone]}"
+              quote.email = "#{params[:requestquote][:email]}"
+              quote.current_website = "#{params[:requestquote][:current_website]}"
+              quote.numpage = "#{params[:requestquote][:numpage]}"
+              quote.target_market = "#{params[:requestquote][:target_market]}"
+              quote.project_desc = "#{params[:requestquote][:project_desc]}"
               if quote.save
 
 
