@@ -20,6 +20,7 @@ Wirates::Application.routes.draw do |map|
      resources :pages 
      resources :companies
      resources :services
+     resources :contacts
   end
   
 
