@@ -42,20 +42,20 @@
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
 					
-					<th class="table-header-repeat line-left minwidth-1"><span style="color: #FFFFFF;">Title</span>	</th>
-					<th class="table-header-repeat line-left minwidth-1"><a href="">Description</a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="javascript:void(0);">Title</a>	</th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="javascript:void(0);">Description</a></th>
 					
-					<th class="table-header-options line-left"><a href="">Options</a></th>
+					<th class="table-header-options line-left"><a href="javascript:void(0);">Options</a></th>
 				</tr>
 				<% @companies.each do |company| %>
 				<tr>
 					
 					<td><%= company.title %></td>
-					<td><%= truncate(company.body, :length => 110) %></td>
+					<td><%= truncate(company.body, :length => 110).html_safe %></td>
 					
 					<td class="options-width">
-						<%= link_to "Edit", edit_admin_company_path(company), :class=>'icon-1 info-tooltip' %>
-						<a href="" title="Delete" class="icon-2 info-tooltip"></a>
+						<%= link_to "", edit_admin_company_path(company), :class=>'icon-1 info-tooltip', :title=>'edit' %>
+						<a href="/admin/companies/<%= company.id %>/delete" onclick="if(confirm('Are you sure you want to delete this pages?'))  return true;  else  return false;" class="icon-2 info-tooltip" title="Delete"></a>
 					
 					</td>
 				</tr>
