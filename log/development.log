@@ -44517,3 +44517,4 @@ Migrating to CreateRequestquotes (20111122165207)
   [1m[35mSQL (0.4ms)[0m  PRAGMA index_list("slugs")
   [1m[36mSQL (0.6ms)[0m  [1mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
   [1m[35mSQL (0.3ms)[0m  PRAGMA index_info('index_slugs_on_sluggable_id')
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /root/rails-pgm/wirates/config/routes.rb:1)

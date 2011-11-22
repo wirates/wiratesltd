@@ -9,12 +9,6 @@
 <!--[if IE]>
 <link rel="stylesheet" media="all" type="text/css" href="css/pro_dropline_ie.css" />
 <![endif]-->
-
-
-
-
-
-
 </head>
 <body> 
 <!-- Start: page-top-outer -->
@@ -135,6 +129,10 @@
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
+		
+		<div class="nav-divider">&nbsp;</div>
+		
+		<ul <% if controller.controller_name == 'contacts' %> class="current" <% else %> class="select" <% end %>><li><a href="/admin/contacts"><b>Contact Message</b></ul>
 		
 		<div class="clear"></div>
 		</div>
