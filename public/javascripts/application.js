@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 		     },
 		
 		    "contact[message]":{
-						required: true
+						required: true,
 						
 			}
 		},
@@ -42,6 +42,52 @@ jQuery(document).ready(function() {
 		},
 		"contact[message]":{
 						            required: "Please enter message"
+						
+		}
+		}
+	});
+});
+
+
+//validation for request a quotes
+jQuery(document).ready(function() {
+  jQuery("#quote_form").validate({	
+	rules: {
+		"requestquote[name]":{
+	                  required: true,
+					  minlength: 2
+                        		
+			 },
+			"requestquote[phone]":{
+		                  required: true
+
+				 },
+		
+		     "requestquote[email]":{
+						required: true,
+						email:true
+			 },
+	
+		     "requestquote[project_desc]":{
+						required:true
+		     }
+		},
+	messages: {
+		"requestquote[name]":{
+						required: "Please enter name",
+                        minlength: "Your first name must consist of at least 2 characters"
+			},
+		"requestquote[phone]":{
+							required: "Please enter phone number"
+				},
+		
+		"requestquote[email]":{
+						required: "Please enter email address",
+			            email: "Please enter valid email address"
+						
+		},
+		"requestquote[project_desc]":{
+						            required: "Please describe the projects"
 						
 		}
 		}
