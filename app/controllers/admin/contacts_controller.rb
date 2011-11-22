@@ -1,6 +1,6 @@
 class Admin::ContactsController < Admin::BaseController
   
-  before_filter :authenticate_admin!, :except => []
+  before_filter :authenticate_admin!, :except => [] a
   
   def index
     @contacts = Contact.find(:all, :order => 'id desc').paginate(:per_page => 15, :page => params[:page])
