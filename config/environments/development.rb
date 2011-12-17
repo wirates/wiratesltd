@@ -22,13 +22,7 @@ Wirates::Application.configure do
 
   # these options are only needed if you choose smtp delivery
   config.action_mailer.smtp_settings = {
-      :address              => 'smtp.gmail.com',
-      :port                 => 587,
-      :domain               => 'imap.gmail.com',
-      :user_name            => 'amolrkon@gmail.com',
-      :password             => 'am800719',
-      :authentication       => 'login',
-      :enable_starttls_auto => true
+      
     }
 
   # Print deprecation notices to the Rails logger
